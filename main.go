@@ -35,3 +35,12 @@ func main() {
 func handleDisplaySurface(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Display Surface")
 }
+
+func f(x, y float64) (value float64, ok bool) {
+	r := math.Hypot(x, y) // distance from (0,0)
+	if math.IsNaN(r) == true {
+		return 0, false
+	}
+
+	return math.Sin(r) / r, true
+}
