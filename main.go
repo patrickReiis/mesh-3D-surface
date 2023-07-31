@@ -36,6 +36,21 @@ func handleDisplaySurface(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Display Surface")
 }
 
+func corner(i, j int) (svgX float64, svgY float64, ok bool) {
+	// Find point (x,y) at corner of cell (i,j).
+	x := defaultXyrange * (float64(i)/defaultCells - 0.5)
+	y := defaultXyrange * (float64(j)/defaultCells - 0.5)
+	// Compute surface height z.
+	z, ok := f(x, y)
+	if ok == false {
+		return 0, 0, false
+	}
+	// Project (x,y,z) isometrically onto 2-D SVG canvas (sx,sy).
+	sx := defaultWidth/2 + (x-y)*cos30*defaultXyscale
+	sy := defaultHeight/2 + (x+y)*sin30*defaultXyscale - z*defaultZscale
+	return sx, sy, true
+}
+
 func f(x, y float64) (value float64, ok bool) {
 	r := math.Hypot(x, y) // distance from (0,0)
 	if math.IsNaN(r) == true {
