@@ -33,7 +33,18 @@ func main() {
 }
 
 func handleDisplaySurface(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Display Surface")
+	if err := r.ParseForm(); err != nil {
+		fmt.Fprintf(w, "%v", err)
+		return
+	}
+
+	svgData := getSvgData(r.Form)
+
+	fmt.Fprint(w, svgData)
+}
+
+func getSvgData(options map[string][]string) string {
+	return "Hi"
 }
 
 func corner(i, j int) (svgX float64, svgY float64, ok bool) {
