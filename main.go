@@ -40,6 +40,7 @@ func handleDisplaySurface(w http.ResponseWriter, r *http.Request) {
 
 	svgData := getSvgData(r.Form)
 
+	w.Header().Set("Content-Type", "image/svg+xml")
 	fmt.Fprint(w, svgData)
 }
 
