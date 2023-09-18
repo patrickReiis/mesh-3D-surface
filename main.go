@@ -16,7 +16,7 @@ const (
 	defaultXYscale              = defaultWidth / 2 / defaultXYrange // pixels per x or y unit
 	defaultZscale               = defaultHeight * 0.4               // pixels per z unit
 	defaultAngle                = math.Pi / 6                       // angle of x, y axes (=30°)
-	defaultColor                = "#ff0000"                         // Red is the default color
+	defaultColor                = "ff0000"                          // Red is the default color
 )
 
 var sin30, cos30 = math.Sin(defaultAngle), math.Cos(defaultAngle) // sin(30°), cos(30°)
