@@ -73,7 +73,8 @@ func getSvgData(options map[string][]string) (svgFile string) {
 	}
 
 	svgFile += fmt.Sprintf("<svg xmlns='http://www.w3.org/2000/svg' "+
-		"style='stroke: grey; fill: white; stroke-width: 0.7' "+
+		"style='stroke: grey; fill: white; stroke-width: 0.7; "+
+		"display: block; margin: auto;' "+
 		"width='%d' height='%d'>", clientWidth, clientHeight)
 
 	for i := 0; i < defaultCells; i++ {
