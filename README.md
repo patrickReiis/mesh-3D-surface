@@ -16,3 +16,6 @@ A program for creating 3d mesh surface.
 - height=\<number\>
 - width=\<number\>
 - color=\<color in HEX format, without the initial \# character \>
+
+## Credits
+I learned it in the "The Go Programming Language" book.
