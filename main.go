@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	defaultWidth, defaultHeight = 600, 320                          // canvas size in pixels
+	defaultWidth, defaultHeight = 1200, 640                         // canvas size in pixels
 	defaultCells                = 100                               // number of grid cells
 	defaultXYrange              = 30.0                              // axis ranges (-xyrange..+xyrange)
 	defaultXYscale              = defaultWidth / 2 / defaultXYrange // pixels per x or y unit
