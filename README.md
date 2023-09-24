@@ -7,6 +7,6 @@
 4. In the browser, open `localhost:8080`
 
 ## Query Parameters
-- height=<number>
-- width=<number>
-- color=<color in HEX format>
+- height=\<number\>
+- width=\<number\>
+- color=\<color in HEX format\>
