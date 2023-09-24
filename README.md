@@ -5,3 +5,8 @@
 2. In the `mesh-3D-surface` directory, use `go build` to make the executable.
 3. Run the executable.
 4. In the browser, open `localhost:8080`
+
+## Query Parameters
+- height=<number>
+- width=<number>
+- color=<color in HEX format>
